@@ -868,7 +868,7 @@ void Mesh::read(const std::string &file)
           std::vector<int> data(n_tags); // allocate the memory for some data
           for (int i = 0; i < n_tags; ++i) // read this information
             in >> data[i];
-          phys_domain = (n_tags > 0) ? data[0] : 0; // physical domain - the most important value
+          phys_domain = (n_tags > 1) ? data[1] : 0; // physical domain - the most important value
 //          elem_domain = (n_tags > 1) ? data[1] : 0; // elementary domain
 //          partition   = (n_tags > 2) ? data[2] : 0; // partition (Metis, Chaco, etc)
           data.clear(); // other data isn't interesting for us
